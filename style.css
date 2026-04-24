@@ -235,6 +235,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    will-change: transform, opacity;
 }
 
 /* ===========================
@@ -313,6 +314,7 @@ img {
     overflow: hidden;
     border: none;
     cursor: pointer;
+    will-change: transform;
 }
 
 .btn-primary {
@@ -588,6 +590,21 @@ img {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll;
+        min-height: 80vh;
+    }
+    
+    #bg-canvas {
+        display: none;
+    }
+    
+    #particles-overlay {
+        display: none;
+    }
 }
 
 .hero-3d-scene {
@@ -1229,6 +1246,7 @@ img {
     transition: var(--transition-normal);
     transform-style: preserve-3d;
     perspective: 1000px;
+    will-change: transform;
 }
 
 .card-3d-wrapper {

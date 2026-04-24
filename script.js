@@ -25,7 +25,7 @@
         const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
 
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
         // Helper to create a book
         function createBook() {
@@ -306,7 +306,9 @@
         });
     }
 
-    init3DBackground();
+    if (window.innerWidth > 768) {
+        init3DBackground();
+    }
 
     // ===========================
     // DOM Particles Overlay
@@ -344,7 +346,9 @@
         document.head.appendChild(style);
     }
 
-    createParticles();
+    if (window.innerWidth > 768) {
+        createParticles();
+    }
 
     // ===========================
     // Navbar Scroll Effect
@@ -414,24 +418,30 @@
     });
 
     // ===========================
-    // Scroll Reveal (AOS-like)
+    // Scroll Reveal (Intersection Observer)
     // ===========================
-    function revealElements() {
+    function initScrollReveal() {
         const elements = document.querySelectorAll('[data-aos]');
-        elements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const delay = parseInt(el.getAttribute('data-aos-delay')) || 0;
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseInt(el.getAttribute('data-aos-delay')) || 0;
+                    
+                    setTimeout(() => {
+                        el.classList.add('aos-animate');
+                    }, delay);
+                    
+                    revealObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-            if (rect.top < window.innerHeight * 0.85) {
-                setTimeout(() => {
-                    el.classList.add('aos-animate');
-                }, delay);
-            }
-        });
+        elements.forEach(el => revealObserver.observe(el));
     }
 
-    window.addEventListener('scroll', revealElements);
-    window.addEventListener('load', revealElements);
+    window.addEventListener('load', initScrollReveal);
 
     // ===========================
     // Counter Animation
@@ -595,7 +605,21 @@
         }
     }
 
-    window.addEventListener('scroll', parallaxScroll);
+    // Throttle helper
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    }
+
+    window.addEventListener('scroll', throttle(parallaxScroll, 10));
 
     // ===========================
     // Magnetic effect on buttons
@@ -769,6 +793,6 @@
 
     fetchAnnouncements();
 
-    console.log('🎓 Gyan Jyoti Gurukulam Public School - Singhara, Vaishali | Website Loaded Successfully');
+    console.log('🎓 Gyan Jyoti Gurukulam Public School - Jandaha, Vaishali | Website Loaded Successfully');
 
 })();
