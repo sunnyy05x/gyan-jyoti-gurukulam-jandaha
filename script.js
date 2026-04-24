@@ -1,5 +1,5 @@
 /* ===========================
-   Oxford Public School - 3D Interactive Website
+   Gyan Jyoti Gurukulam Public School - 3D Interactive Website
    JavaScript with Three.js, Particles, Animations
    =========================== */
 
@@ -321,7 +321,7 @@
                 position: absolute;
                 width: ${Math.random() * 4 + 2}px;
                 height: ${Math.random() * 4 + 2}px;
-                background: radial-gradient(circle, rgba(116, 155, 194, ${Math.random() * 0.4 + 0.1}), transparent);
+                background: radial-gradient(circle, rgba(185, 28, 28, ${Math.random() * 0.4 + 0.1}), transparent);
                 border-radius: 50%;
                 top: ${Math.random() * 100}%;
                 left: ${Math.random() * 100}%;
@@ -665,8 +665,9 @@
     // Fetch Announcements from Google Sheets
     // ===========================
     async function fetchAnnouncements() {
-        const sheetId = '1MUHhGCbLef7E9W0vDM9IWvyT-7EiWUKGjulHWlB35o8';
-        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+        const sheetId = '1z9y7QYB6MYjXU_R3RBfklQmnx4jWX5ATuo9LRaDxPY4';
+        const gid = '1072262507';
+        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&gid=${gid}`;
         const listContainer = document.getElementById('announcement-list');
 
         if (!listContainer) return;
@@ -759,7 +760,7 @@
             console.error('Error fetching announcements:', error);
             listContainer.innerHTML = `
                 <div class="empty-state">
-                    <i class="fas fa-exclamation-circle" style="color: #ffb4a2;"></i>
+                    <i class="fas fa-exclamation-circle" style="color: #F97316;"></i>
                     <p>Failed to load announcements. Please try again later.</p>
                 </div>
             `;
@@ -768,6 +769,6 @@
 
     fetchAnnouncements();
 
-    console.log('🎓 Oxford Public School - Mahua, Vaishali | Website Loaded Successfully');
+    console.log('🎓 Gyan Jyoti Gurukulam Public School - Singhara, Vaishali | Website Loaded Successfully');
 
 })();

@@ -2,41 +2,42 @@
    CSS Custom Properties - Light Pastel Theme
    =========================== */
 :root {
-    /* Primary Colors - Soft Blue & Peach */
-    --primary: #749bc2;
-    --primary-dark: #5c83a8;
-    --primary-light: #91b5d9;
-    --secondary: #ffb4a2;
-    --secondary-dark: #e59987;
-    --secondary-light: #ffcdb8;
-    --accent: #b5c99a;
-    --accent-light: #cde4af;
+    /* Primary Colors - Deep Red */
+    --primary: #B91C1C;
+    --primary-dark: #991B1B;
+    --primary-light: #EF4444;
+    /* Secondary & Accent Colors - Warm Orange */
+    --secondary: #F97316;
+    --secondary-dark: #C2410C;
+    --secondary-light: #FB923C;
+    --accent: #F97316;
+    --accent-light: #FDBA74;
 
     /* Neutrals */
-    --bg-dark: #fbfbfb;
-    --bg-darker: #f0f0f0;
-    --bg-card: rgba(255, 255, 255, 0.9);
-    --bg-glass: rgba(255, 255, 255, 0.6);
-    --bg-glass-strong: rgba(255, 255, 255, 0.9);
-    --text-primary: #2b2d42;
-    --text-secondary: #4a4e69;
-    --text-muted: #8d99ae;
+    --bg-dark: #F9FAFB;
+    --bg-darker: #F3F4F6;
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --bg-glass-strong: rgba(255, 255, 255, 0.95);
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --text-muted: #9CA3AF;
     --border-color: rgba(0, 0, 0, 0.08);
-    --border-glow: rgba(116, 155, 194, 0.3);
+    --border-glow: rgba(185, 28, 28, 0.3);
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #749bc2 0%, #91b5d9 100%);
-    --gradient-secondary: linear-gradient(135deg, #ffb4a2 0%, #ffcdb8 100%);
-    --gradient-hero: linear-gradient(135deg, #fdfbfa 0%, #eef5f3 100%);
-    --gradient-card: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(248,250,249,1) 100%);
-    --gradient-text: linear-gradient(135deg, #4a4e69, #749bc2, #4a4e69);
+    --gradient-primary: linear-gradient(135deg, #B91C1C 0%, #EF4444 100%);
+    --gradient-secondary: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+    --gradient-hero: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(249,250,251,1) 100%);
+    --gradient-text: linear-gradient(135deg, #1F2937, #B91C1C, #1F2937);
 
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 20px rgba(116, 155, 194, 0.2);
-    --shadow-glow-strong: 0 0 40px rgba(116, 155, 194, 0.3);
+    --shadow-glow: 0 0 20px rgba(185, 28, 28, 0.2);
+    --shadow-glow-strong: 0 0 40px rgba(185, 28, 28, 0.3);
 
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -604,7 +605,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(251, 251, 251, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(251, 251, 251, 0.85) 100%);
     z-index: 1;
 }
 
