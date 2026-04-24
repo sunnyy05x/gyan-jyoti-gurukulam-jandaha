@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Public School | Mahua, Vaishali - Nurturing Future Leaders</title>
+    <meta name="description" content="Oxford Public School, Mahua (Mahuwa), Vaishali, Bihar - A premier educational institution committed to academic excellence, holistic development, and nurturing future leaders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Particle Overlay -->
+    <div id="particles-overlay"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-shield">
+                    <img src="images/logo.png" alt="Oxford Public School Logo" class="loader-logo-img">
+                </div>
+                <h2>Oxford Public School</h2>
+                <p>Loading Experience...</p>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <img src="images/logo.png" alt="Oxford Public School Logo">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Oxford Public School</span>
+                    <span class="logo-tagline">Mahua, Vaishali</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#announcements" class="nav-link" data-section="announcements">Notices</a></li>
+                <li><a href="#academics" class="nav-link" data-section="academics">Academics</a></li>
+                <li><a href="#facilities" class="nav-link" data-section="facilities">Facilities</a></li>
+                <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta">Enroll Now</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-3d-scene" id="hero3d"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <i class="fas fa-star"></i>
+                <span>Established Institution of Excellence</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up">
+                <span class="hero-line line-1">Welcome to</span>
+                <span class="hero-line line-2 gradient-text">Oxford Public School</span>
+                <span class="hero-line line-3">Mahua, Vaishali</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Empowering young minds with knowledge, values, and skills for a brighter tomorrow. 
+                Where every child discovers their unique potential.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn btn-primary btn-glow">
+                    <span>Discover More</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Admissions Open</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="1500">0</div>
+                    <div class="stat-label">Students</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="75">0</div>
+                    <div class="stat-label">Faculty Members</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">% Pass Rate</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Years Legacy</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-info-circle"></i> About Us</span>
+                <h2 class="section-title">Shaping <span class="gradient-text">Tomorrow's Leaders</span></h2>
+                <p class="section-desc">Oxford Public School, Mahua (Vaishali), Bihar, is a distinguished educational institution dedicated to providing quality education with a perfect blend of academics, morals, and extracurricular activities.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrap" data-aos="fade-right">
+                    <div class="about-image tilt-card">
+                        <img src="images/hero.png" alt="Oxford Public School Campus" loading="lazy">
+                        <div class="about-image-overlay">
+                            <div class="experience-badge">
+                                <span class="exp-number">20+</span>
+                                <span class="exp-text">Years of<br>Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="feature-text">
+                            <h3>Our Mission</h3>
+                            <p>To impart holistic education that develops intellectual, physical, emotional, and social potential of every student, preparing them to become responsible global citizens.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                        <div class="feature-text">
+                            <h3>Our Vision</h3>
+                            <p>To be a center of educational excellence that inspires creativity, critical thinking, and lifelong learning in every student who walks through our doors.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                        <div class="feature-text">
+                            <h3>Our Values</h3>
+                            <p>Integrity, discipline, respect, and compassion form the cornerstone of our educational philosophy, guiding students toward becoming ethical and empathetic individuals.</p>
+                        </div>
+                    </div>
+                    <a href="#academics" class="btn btn-primary">
+                        <span>Explore Academics</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>★ Academic Excellence</span>
+                <span>★ Holistic Development</span>
+                <span>★ Modern Infrastructure</span>
+                <span>★ Experienced Faculty</span>
+                <span>★ Sports & Athletics</span>
+                <span>★ Cultural Programs</span>
+                <span>★ Science Labs</span>
+                <span>★ Smart Classrooms</span>
+                <span>★ Academic Excellence</span>
+                <span>★ Holistic Development</span>
+                <span>★ Modern Infrastructure</span>
+                <span>★ Experienced Faculty</span>
+                <span>★ Sports & Athletics</span>
+                <span>★ Cultural Programs</span>
+                <span>★ Science Labs</span>
+                <span>★ Smart Classrooms</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Announcement Center Section -->
+    <section id="announcements" class="section announcement-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-bullhorn"></i> Notice Board</span>
+                <h2 class="section-title">Announcement <span class="gradient-text">Center</span></h2>
+                <p class="section-desc">Stay updated with the latest news, notices, and events at Oxford Public School.</p>
+            </div>
+            <div class="announcement-container" data-aos="fade-up">
+                <div class="announcement-board">
+                    <div class="board-header">
+                        <h3><i class="fas fa-clipboard-list"></i> Latest Updates</h3>
+                        <div class="live-indicator">
+                            <span class="pulse-dot"></span> Live
+                        </div>
+                    </div>
+                    <div class="board-content" id="announcement-list">
+                        <div class="loading-announcements">
+                            <div class="spinner"></div>
+                            <p>Loading latest announcements...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="section academics-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-book-open"></i> Academics</span>
+                <h2 class="section-title">Our <span class="gradient-text">Academic Programs</span></h2>
+                <p class="section-desc">We offer comprehensive education from Nursery to Senior Secondary, following the CBSE curriculum with focus on conceptual learning and practical application.</p>
+            </div>
+            <div class="academics-grid">
+                <div class="academic-card tilt-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-3d-wrapper">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h3>Pre-Primary</h3>
+                        <p>Nurturing young minds through play-based learning, building foundation for future academic success.</p>
+                        <div class="card-tag">Nursery - KG</div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Activity-based learning</li>
+                            <li><i class="fas fa-check"></i> Creative arts & music</li>
+                            <li><i class="fas fa-check"></i> Personality development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="academic-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-3d-wrapper">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <h3>Primary</h3>
+                        <p>Building strong academic foundations with a balanced curriculum of languages, mathematics, and sciences.</p>
+                        <div class="card-tag">Class I - V</div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> CBSE curriculum</li>
+                            <li><i class="fas fa-check"></i> Smart classrooms</li>
+                            <li><i class="fas fa-check"></i> Co-curricular focus</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="academic-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-3d-wrapper">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Middle School</h3>
+                        <p>Deepening knowledge with advanced subjects, practical experiments, and competitive exam preparation.</p>
+                        <div class="card-tag">Class VI - VIII</div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Science laboratories</li>
+                            <li><i class="fas fa-check"></i> Computer education</li>
+                            <li><i class="fas fa-check"></i> Olympiad training</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="academic-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-3d-wrapper">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Secondary</h3>
+                        <p>Preparing students for board examinations with intensive coaching and career guidance programs.</p>
+                        <div class="card-tag">Class IX - XII</div>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Board exam preparation</li>
+                            <li><i class="fas fa-check"></i> Career counseling</li>
+                            <li><i class="fas fa-check"></i> Competitive exams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-award"></i> Why Choose Us</span>
+                <h2 class="section-title">What Makes Us <span class="gradient-text">Stand Apart</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="why-card-inner">
+                        <div class="why-number">01</div>
+                        <div class="why-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>Expert Faculty</h3>
+                        <p>Highly qualified and experienced teachers dedicated to nurturing each student's potential.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-card-inner">
+                        <div class="why-number">02</div>
+                        <div class="why-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Smart Classrooms</h3>
+                        <p>Technology-enabled classrooms with digital boards and interactive learning tools.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="why-card-inner">
+                        <div class="why-number">03</div>
+                        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Safe Environment</h3>
+                        <p>CCTV-monitored campus with strict safety protocols ensuring a secure learning space.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="why-card-inner">
+                        <div class="why-number">04</div>
+                        <div class="why-icon"><i class="fas fa-bus-alt"></i></div>
+                        <h3>Transport Facility</h3>
+                        <p>GPS-tracked school buses covering all major routes in and around Mahua, Vaishali.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="why-card-inner">
+                        <div class="why-number">05</div>
+                        <div class="why-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Proven Results</h3>
+                        <p>Consistently outstanding board exam results with district toppers year after year.</p>
+                    </div>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="why-card-inner">
+                        <div class="why-number">06</div>
+                        <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Value Education</h3>
+                        <p>Strong emphasis on moral values, ethics, and character building alongside academics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section facilities-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-building"></i> Facilities</span>
+                <h2 class="section-title">World-Class <span class="gradient-text">Infrastructure</span></h2>
+                <p class="section-desc">Our campus is equipped with modern facilities to provide students with the best possible learning environment.</p>
+            </div>
+            <div class="facilities-showcase">
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="facility-image tilt-card">
+                        <img src="images/lab.png" alt="Science Laboratory" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Science Laboratories</h3>
+                        <p>Well-equipped Physics, Chemistry, and Biology labs for hands-on experimental learning.</p>
+                    </div>
+                </div>
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="facility-image tilt-card">
+                        <img src="images/library.png" alt="School Library" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-books"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Library & Reading Room</h3>
+                        <p>Extensive collection of books, periodicals, and digital resources for enriched learning.</p>
+                    </div>
+                </div>
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="facility-image tilt-card">
+                        <img src="images/sports.png" alt="Sports Ground" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Sports Complex</h3>
+                        <p>Spacious playground with facilities for cricket, football, basketball, and athletics.</p>
+                    </div>
+                </div>
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="facility-image tilt-card">
+                        <img src="images/academics.png" alt="Smart Classroom" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Smart Classrooms</h3>
+                        <p>Digital boards, projectors, and interactive learning tools in every classroom.</p>
+                    </div>
+                </div>
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="facility-image tilt-card">
+                        <img src="images/transport.png" alt="School Transport" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Transport Fleet</h3>
+                        <p>Safe and comfortable school buses covering all major areas of Mahua and surroundings.</p>
+                    </div>
+                </div>
+                <div class="facility-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="facility-image tilt-card">
+                        <img src="images/cultural.png" alt="Auditorium" loading="lazy">
+                        <div class="facility-overlay">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                    </div>
+                    <div class="facility-info">
+                        <h3>Auditorium & Stage</h3>
+                        <p>Multi-purpose hall for events, cultural programs, annual day celebrations, and assemblies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Quote Section -->
+    <section class="parallax-quote">
+        <div class="parallax-overlay"></div>
+        <div class="container">
+            <div class="quote-content" data-aos="zoom-in">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <blockquote>
+                    "Education is the most powerful weapon which you can use to change the world."
+                </blockquote>
+                <cite>— Nelson Mandela</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-images"></i> Gallery</span>
+                <h2 class="section-title">Glimpses of <span class="gradient-text">School Life</span></h2>
+                <p class="section-desc">Explore the vibrant moments that define the Oxford Public School experience.</p>
+            </div>
+            <div class="gallery-grid" data-aos="fade-up">
+                <div class="gallery-item large tilt-card">
+                    <img src="images/hero.png" alt="School Building" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>School Campus</span>
+                    </div>
+                </div>
+                <div class="gallery-item tilt-card">
+                    <img src="images/academics.png" alt="Classroom Learning" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Classroom</span>
+                    </div>
+                </div>
+                <div class="gallery-item tilt-card">
+                    <img src="images/lab.png" alt="Science Lab" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Science Lab</span>
+                    </div>
+                </div>
+                <div class="gallery-item tilt-card">
+                    <img src="images/sports.png" alt="Sports Activities" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Sports</span>
+                    </div>
+                </div>
+                <div class="gallery-item tilt-card">
+                    <img src="images/cultural.png" alt="Cultural Events" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Cultural Events</span>
+                    </div>
+                </div>
+                <div class="gallery-item large tilt-card">
+                    <img src="images/library.png" alt="Library" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Library</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-comments"></i> Testimonials</span>
+                <h2 class="section-title">What Parents <span class="gradient-text">Say About Us</span></h2>
+            </div>
+            <div class="testimonials-carousel" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Oxford Public School has transformed my child's learning experience. The teachers are dedicated and the environment is truly nurturing. I couldn't be happier with our choice."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>Parent of Class VIII Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"The school's focus on both academics and extracurricular activities has helped my daughter grow into a confident and well-rounded individual. Excellent infrastructure and staff."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Sunita Devi</h4>
+                            <span>Parent of Class X Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best school in Mahua! The discipline, values, and quality education provided here are unmatched. My son has excelled in both studies and sports since joining Oxford Public School."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Amit Sharma</h4>
+                            <span>Parent of Class V Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contact Us</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-desc">We'd love to hear from you. Reach out for admissions, queries, or campus visits.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card glass-card">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p>Mahua (Mahuwa), Vaishali,<br>Bihar - 844122, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 96317 78636<br>+91 82084 00116</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>info@oxfordpublicschoolmahua.com<br>admissions@oxfordpublicschoolmahua.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-text">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Saturday<br>8:00 AM - 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map glass-card">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14372.09412!2d85.37!3d25.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5a8e3b5e8e7d%3A0x1234567890abcdef!2sMahua%2C%20Vaishali%2C%20Bihar!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="250" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-left">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <h3>Send Us a Message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="general">General Information</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,101.3C1248,96,1344,64,1392,48L1440,32V120H1392C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120H0Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon"><img src="images/logo.png" alt="Oxford Public School Logo"></div>
+                            <div class="logo-text">
+                                <span class="logo-name">Oxford Public School</span>
+                                <span class="logo-tagline">Mahua, Vaishali</span>
+                            </div>
+                        </div>
+                        <p>Committed to academic excellence and holistic development of every student. Building future leaders since our inception in Mahua, Vaishali.</p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#academics">Academics</a></li>
+                            <li><a href="#facilities">Facilities</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>Academics</h4>
+                        <ul>
+                            <li><a href="#academics">Pre-Primary</a></li>
+                            <li><a href="#academics">Primary School</a></li>
+                            <li><a href="#academics">Middle School</a></li>
+                            <li><a href="#academics">Secondary School</a></li>
+                            <li><a href="#academics">CBSE Curriculum</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Mahua, Vaishali, Bihar</li>
+                            <li><i class="fas fa-phone-alt"></i> +91 96317 78636</li>
+                            <li><i class="fas fa-envelope"></i> info@oxfordpublicschoolmahua.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Sat: 8AM - 3PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Oxford Public School, Mahua, Vaishali. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+        <img src="" alt="Gallery Image" id="lightboxImg">
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
