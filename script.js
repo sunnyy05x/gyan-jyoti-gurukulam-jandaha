@@ -448,15 +448,11 @@
     // ===========================
     function animateCounters() {
         const counters = document.querySelectorAll('.stat-number');
-        let animated = false;
-
-        function checkCounters() {
-            if (animated) return;
-
-            counters.forEach(counter => {
-                const rect = counter.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.9) {
-                    animated = true;
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
                     const target = parseInt(counter.getAttribute('data-count'));
                     const duration = 2000;
                     const start = performance.now();
@@ -474,12 +470,12 @@
                     }
 
                     requestAnimationFrame(update);
+                    counterObserver.unobserve(counter);
                 }
             });
-        }
+        }, { threshold: 0.1 });
 
-        window.addEventListener('scroll', checkCounters);
-        checkCounters();
+        counters.forEach(counter => counterObserver.observe(counter));
     }
 
     animateCounters();
